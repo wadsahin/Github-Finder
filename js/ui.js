@@ -42,6 +42,10 @@ class UI{
         let containter = document.querySelector('.searchContainer');
         let search = document.querySelector('.search');
         containter.insertBefore(div, search);
+
+        setTimeout(() => {
+            document.querySelector('.alert').remove();
+        }, 3000);
     }
     
     clearAlert(){

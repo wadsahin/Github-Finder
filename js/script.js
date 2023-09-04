@@ -8,12 +8,13 @@ searchBtn.addEventListener('click', (e) =>{
         fetch(`https://api.github.com/users/${userText}`)
             .then(res => res.json())
             .then(data =>{
-                console.log(data);
+                
                 if(data.message == 'Not Found'){
                     //show alert
                     ui.showAlert('User Not found !!', 'alert alert-danger');
                 }else{
                     //show profile
+                    ui.clearAlert();
                     ui.showProfile(data);
                 }
             })
